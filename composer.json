@@ -7,7 +7,7 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": [
-            "src/engine.php"
+            "src/Engine.php"
         ]
     },
     "authors": [
