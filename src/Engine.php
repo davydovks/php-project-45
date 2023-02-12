@@ -36,10 +36,14 @@ function askOne($question, $answer): bool
     }
 }
 
-function askThree($questions, $answers): bool
-// Оба аргумента - массивы трех значений
+function askQuestions($questions, $answers, $count = 3): bool
+// $questions - массив вопросов
+// $answers - массив правильных ответов
+// $count - количество элементов в обоих массивах
+// Возвращает TRUE, если все ответы правильные
+// При неправильном ответе возвращает FALSE и прекращает задавать вопросы
 {
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < $count; $i++) {
         $result = askOne($questions[$i], $answers[$i]);
         if (!$result) {
             return false;

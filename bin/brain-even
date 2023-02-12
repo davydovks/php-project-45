@@ -7,7 +7,7 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 
 use function BrainGames\Engine\askName;
 use function BrainGames\Engine\showTask;
-use function BrainGames\Engine\askThree;
+use function BrainGames\Engine\askQuestions;
 use function BrainGames\Engine\farewell;
 
 // Приветствие и запрос имени
@@ -30,7 +30,7 @@ for ($i = 0; $i < 3; $i++) {
 }
 
 // Задаем три задачи
-$result = askThree($questions, $answers);
+$result = askQuestions($questions, $answers);
 
 // Прощаемся
 farewell($username, $result);
