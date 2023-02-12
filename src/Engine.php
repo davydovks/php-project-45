@@ -27,7 +27,7 @@ function askOne($question, $answer): bool
 {
     line('Question: %s', $question);
     $userAnswer = prompt("Your answer");
-    if ($userAnswer === $answer) {
+    if ($userAnswer == $answer) {
         line("Correct!");
         return true;
     } else {
