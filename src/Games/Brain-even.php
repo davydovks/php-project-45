@@ -1,4 +1,3 @@
-#!/usr/bin/env php
 <?php
 
 namespace BrainGames\Games\Brain\Even;
