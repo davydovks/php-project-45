@@ -6,6 +6,8 @@ use function cli\line;
 use function cli\prompt;
 
 function askName(): string
+// Приветствие пользователя, запрос имени
+// Возвращает имя пользователя
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?", false, " ");
@@ -14,11 +16,14 @@ function askName(): string
 }
 
 function showTask($text)
+// Вывод задания игры и перевод строки
 {
     line($text);
 }
 
 function askOne($question, $answer): bool
+// Задает вопрос и проверяет введенный ответ
+// Возвращает TRUE при правильном ответе, FALSE при неправильном
 {
     line('Question: %s', $question);
     $userAnswer = prompt("Your answer");
@@ -44,6 +49,7 @@ function askThree($questions, $answers): bool
 }
 
 function farewell($name, $success)
+// Прощание с пользователем
 {
     if ($success) {
         line("Congratulations, %s!", $name);
