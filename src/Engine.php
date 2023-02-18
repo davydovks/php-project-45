@@ -61,3 +61,28 @@ function farewell($name, $success)
         line("Let's try again, %s!", $name);
     }
 }
+
+function runGame($task, $QnA, $count)
+// Запуск игры
+// Параметры:
+// $task - условия игры (string)
+// $QnA - вопросы и ответы (массив [$questions, $answers])
+//     $questions - массив вопросов
+//     $answers - массив ответов
+// $count - количество вопросов и ответов, длина массивов $questions и $answers
+{
+    // Приветствие и запрос имени
+    $username = askName();
+    
+    // Показываем условия игры
+    showTask($task);
+    
+    // Получаем вопросы и правильные ответы
+    [$questions, $answers] = $QnA;
+    
+    // Задаем вопросы
+    $result = askQuestions($questions, $answers, $count);
+    
+    // Прощаемся
+    farewell($username, $result);
+}
