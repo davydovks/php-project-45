@@ -2,10 +2,7 @@
 
 namespace BrainGames\Games\Brain\Calc;
 
-use function BrainGames\Engine\askName;
-use function BrainGames\Engine\showTask;
-use function BrainGames\Engine\askQuestions;
-use function BrainGames\Engine\farewell;
+use function BrainGames\Engine\runGame;
 
 function getQnAForCalc($count)
 // Возвращает вопросы и правильные ответы для игры "Калькулятор" в формате 
@@ -45,21 +42,10 @@ function getQnAForCalc($count)
 }
 
 function runCalc($count = 3)
-// Запускает игру "Проверка на чётность".
+// Запускает игру "Проверка на чётность"
 // $count - количество раундов
 {
-    // Приветствие и запрос имени
-    $username = askName();
-    
-    // Показываем условия игры
-    showTask('What is the result of the expression?');
-    
-    // Генерируем задания
-    [$questions, $answers] = getQnAForCalc($count);
-    
-    // Задаем вопросы
-    $result = askQuestions($questions, $answers, $count);
-    
-    // Прощаемся
-    farewell($username, $result);
+    $task = 'What is the result of the expression?';
+    $QnA = getQnAForCalc($count);
+    runGame($task, $QnA, $count);
 }

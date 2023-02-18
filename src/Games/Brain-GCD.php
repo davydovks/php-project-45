@@ -2,10 +2,7 @@
 
 namespace BrainGames\Games\Brain\GCD;
 
-use function BrainGames\Engine\askName;
-use function BrainGames\Engine\showTask;
-use function BrainGames\Engine\askQuestions;
-use function BrainGames\Engine\farewell;
+use function BrainGames\Engine\runGame;
 
 function getGCD($a, $b)
 // Возвращает НОД двух чисел
@@ -39,21 +36,10 @@ function getQnAForGCD($count)
 }
 
 function runGCD($count = 3)
-// Запускает игру "НОД".
+// Запускает игру "НОД"
 // $count - количество раундов
 {
-    // Приветствие и запрос имени
-    $username = askName();
-    
-    // Показываем условия игры
-    showTask('Find the greatest common divisor of given numbers.');
-    
-    // Генерируем задания
-    [$questions, $answers] = getQnAForGCD($count);
-    
-    // Задаем вопросы
-    $result = askQuestions($questions, $answers, $count);
-    
-    // Прощаемся
-    farewell($username, $result);
+    $task = 'Find the greatest common divisor of given numbers.';
+    $QnA = getQnAForGCD($count);
+    runGame($task, $QnA, $count);
 }

@@ -2,10 +2,7 @@
 
 namespace BrainGames\Games\Brain\Even;
 
-use function BrainGames\Engine\askName;
-use function BrainGames\Engine\showTask;
-use function BrainGames\Engine\askQuestions;
-use function BrainGames\Engine\farewell;
+use function BrainGames\Engine\runGame;
 
 function getQnAForEven($count)
 // Возвращает вопросы и правильные ответы для игры "Проверка на чётность" в 
@@ -32,18 +29,7 @@ function runEven($count = 3)
 // Запускает игру "Проверка на чётность".
 // $count - количество раундов
 {
-    // Приветствие и запрос имени
-    $username = askName();
-    
-    // Показываем условия игры
-    showTask('Answer "yes" if the number is even, otherwise answer "no".');
-    
-    // Генерируем задания
-    [$questions, $answers] = getQnAForEven($count);
-    
-    // Задаем вопросы
-    $result = askQuestions($questions, $answers, $count);
-    
-    // Прощаемся
-    farewell($username, $result);
+    $task = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $QnA = getQnAForEven($count);
+    runGame($task, $QnA, $count);
 }
