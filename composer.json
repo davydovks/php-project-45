@@ -10,7 +10,8 @@
             "src/Engine.php",
             "src/Games/Brain-even.php",
             "src/Games/Brain-calc.php",
-            "src/Games/Brain-GCD.php"
+            "src/Games/Brain-GCD.php",
+            "src/Games/Brain-progression.php"
         ]
     },
     "authors": [
@@ -25,7 +26,9 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.7"
