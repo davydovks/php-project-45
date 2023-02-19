@@ -4,11 +4,11 @@ namespace BrainGames\Games\Brain\Progression;
 
 use function BrainGames\Engine\runGame;
 
-function getQnAForProgression($count)
-// Возвращает вопросы и правильные ответы для игры "Арифметическая прогрессия"  
+// Возвращает вопросы и правильные ответы для игры "Арифметическая прогрессия"
 // в формате массива из двух массивов: в первом массиве вопросы (задания), во
 // втором - правильные ответы на них. Аргумент $count определяет количество
 // элементов в обоих массивах (количество задаваемых вопросов).
+function getQnAForProgression($count)
 {
     $questions = [];
     $answers = [];
@@ -34,9 +34,9 @@ function getQnAForProgression($count)
     return [$questions, $answers];
 }
 
-function runProgression($count = 3)
 // Запускает игру "Арифметическая прогрессия"
 // $count - количество раундов
+function runProgression($count = 3)
 {
     $task = 'What number is missing in the progression?';
     $QnA = getQnAForProgression($count);

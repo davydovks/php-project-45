@@ -4,11 +4,11 @@ namespace BrainGames\Games\Brain\Calc;
 
 use function BrainGames\Engine\runGame;
 
-function getQnAForCalc($count)
-// Возвращает вопросы и правильные ответы для игры "Калькулятор" в формате 
+// Возвращает вопросы и правильные ответы для игры "Калькулятор" в формате
 // массива из двух массивов: в первом массиве вопросы (задания), во
 // втором - правильные ответы на них. Аргумент $count определяет количество
 // элементов в обоих массивах (количество задаваемых вопросов).
+function getQnAForCalc($count)
 {
     $questions = [];
     $answers = [];
@@ -41,9 +41,9 @@ function getQnAForCalc($count)
     return [$questions, $answers];
 }
 
-function runCalc($count = 3)
 // Запускает игру "Проверка на чётность"
 // $count - количество раундов
+function runCalc($count = 3)
 {
     $task = 'What is the result of the expression?';
     $QnA = getQnAForCalc($count);
