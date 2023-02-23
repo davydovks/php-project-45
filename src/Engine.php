@@ -10,7 +10,7 @@ use function cli\prompt;
 function askName(): string
 {
     line("Welcome to the Brain Games!");
-    $name = prompt("May I have your name?", false, " ");
+    $name = prompt("May I have your name?", "", " ");
     line("Hello, %s!", $name);
     return $name;
 }
