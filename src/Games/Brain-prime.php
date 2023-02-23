@@ -4,7 +4,8 @@ namespace BrainGames\Games\Brain\Prime;
 
 use function BrainGames\Engine\runGame;
 
-function isPrime($num)
+// Проверка на то, является ли число простым
+function isPrime(int $num): bool
 {
     $result = true;
     $highestIntegralSquareRoot = floor(sqrt($num));
@@ -23,7 +24,7 @@ function isPrime($num)
 // в формате массива из двух массивов: в первом массиве вопросы (задания), во
 // втором - правильные ответы на них. Аргумент $count определяет количество
 // элементов в обоих массивах (количество задаваемых вопросов).
-function getQnAForPrime($count)
+function getQnAForPrime(int $count): array
 {
     $questions = [];
     $answers = [];
@@ -43,7 +44,7 @@ function getQnAForPrime($count)
 
 // Запускает игру "Простое ли число?"
 // $count - количество раундов
-function runPrime($count = 3)
+function runPrime(int $count = 3)
 {
     $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $QnA = getQnAForPrime($count);

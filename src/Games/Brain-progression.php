@@ -8,7 +8,7 @@ use function BrainGames\Engine\runGame;
 // в формате массива из двух массивов: в первом массиве вопросы (задания), во
 // втором - правильные ответы на них. Аргумент $count определяет количество
 // элементов в обоих массивах (количество задаваемых вопросов).
-function getQnAForProgression($count)
+function getQnAForProgression(int $count): array
 {
     $questions = [];
     $answers = [];
@@ -36,7 +36,7 @@ function getQnAForProgression($count)
 
 // Запускает игру "Арифметическая прогрессия"
 // $count - количество раундов
-function runProgression($count = 3)
+function runProgression(int $count = 3)
 {
     $task = 'What number is missing in the progression?';
     $QnA = getQnAForProgression($count);

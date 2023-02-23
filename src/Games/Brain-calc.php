@@ -8,7 +8,7 @@ use function BrainGames\Engine\runGame;
 // массива из двух массивов: в первом массиве вопросы (задания), во
 // втором - правильные ответы на них. Аргумент $count определяет количество
 // элементов в обоих массивах (количество задаваемых вопросов).
-function getQnAForCalc($count)
+function getQnAForCalc(int $count): array
 {
     $questions = [];
     $answers = [];
@@ -43,7 +43,7 @@ function getQnAForCalc($count)
 
 // Запускает игру "Проверка на чётность"
 // $count - количество раундов
-function runCalc($count = 3)
+function runCalc(int $count = 3)
 {
     $task = 'What is the result of the expression?';
     $QnA = getQnAForCalc($count);

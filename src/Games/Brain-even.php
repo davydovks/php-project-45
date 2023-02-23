@@ -8,7 +8,7 @@ use function BrainGames\Engine\runGame;
 // формате массива из двух массивов: в первом массиве вопросы (задания), во
 // втором - правильные ответы на них. Аргумент $count определяет количество
 // элементов в обоих массивах (количество задаваемых вопросов).
-function getQnAForEven($count)
+function getQnAForEven(int $count): array
 {
     $questions = [];
     $answers = [];
@@ -27,7 +27,7 @@ function getQnAForEven($count)
 
 // Запускает игру "Проверка на чётность".
 // $count - количество раундов
-function runEven($count = 3)
+function runEven(int $count = 3)
 {
     $task = 'Answer "yes" if the number is even, otherwise answer "no".';
     $QnA = getQnAForEven($count);
