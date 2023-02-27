@@ -3,9 +3,6 @@
     "description": "hexlet php-project-45",
     "license": "MIT",
     "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        },
         "files": [
             "src/Engine.php",
             "src/Games/Brain-even.php",
