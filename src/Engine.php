@@ -13,7 +13,7 @@ function askName(): string
     return $name;
 }
 
-function askOne(string $question, string $answer): bool
+function askOneQuestion(string $question, string $answer): bool
 {
     line('Question: %s', $question);
     $userAnswer = prompt("Your answer");
@@ -29,7 +29,7 @@ function askOne(string $question, string $answer): bool
 function askQuestions(array $questions, array $answers, int $count): bool
 {
     for ($i = 0; $i < $count; $i++) {
-        $result = askOne($questions[$i], $answers[$i]);
+        $result = askOneQuestion($questions[$i], $answers[$i]);
         if (!$result) {
             return false;
         }
