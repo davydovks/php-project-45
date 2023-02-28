@@ -13,11 +13,6 @@ function askName(): string
     return $name;
 }
 
-function showTask(string $text)
-{
-    line($text);
-}
-
 function askOne(string $question, string $answer): bool
 {
     line('Question: %s', $question);
@@ -54,7 +49,7 @@ function farewell(string $name, bool $success)
 function runGame(string $task, array $QnA, int $count)
 {
     $username = askName();
-    showTask($task);
+    line($task);
     [$questions, $answers] = $QnA;
     $result = askQuestions($questions, $answers, $count);
     farewell($username, $result);
