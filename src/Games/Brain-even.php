@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Games\Brain\Even;
+namespace BrainGames\Games\BrainEven;
 
 use function BrainGames\Engine\runGame;
 
