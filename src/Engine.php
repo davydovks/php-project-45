@@ -5,8 +5,6 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-// Приветствие пользователя, запрос имени
-// Возвращает имя пользователя
 function askName(): string
 {
     line("Welcome to the Brain Games!");
@@ -15,14 +13,11 @@ function askName(): string
     return $name;
 }
 
-// Вывод задания игры и перевод строки
 function showTask(string $text)
 {
     line($text);
 }
 
-// Задает вопрос и проверяет введенный ответ
-// Возвращает TRUE при правильном ответе, FALSE при неправильном
 function askOne(string $question, string $answer): bool
 {
     line('Question: %s', $question);
@@ -36,11 +31,6 @@ function askOne(string $question, string $answer): bool
     }
 }
 
-// $questions - массив вопросов
-// $answers - массив правильных ответов
-// $count - количество элементов в обоих массивах
-// Возвращает TRUE, если все ответы правильные
-// При неправильном ответе возвращает FALSE и прекращает задавать вопросы
 function askQuestions(array $questions, array $answers, int $count): bool
 {
     for ($i = 0; $i < $count; $i++) {
@@ -52,7 +42,6 @@ function askQuestions(array $questions, array $answers, int $count): bool
     return true;
 }
 
-// Прощание с пользователем
 function farewell(string $name, bool $success)
 {
     if ($success) {
@@ -62,27 +51,11 @@ function farewell(string $name, bool $success)
     }
 }
 
-// Запуск игры
-// Параметры:
-// $task - условия игры (string)
-// $QnA - вопросы и ответы (массив [$questions, $answers])
-//     $questions - массив вопросов
-//     $answers - массив ответов
-// $count - количество вопросов и ответов, длина массивов $questions и $answers
 function runGame(string $task, array $QnA, int $count)
 {
-    // Приветствие и запрос имени
     $username = askName();
-
-    // Показываем условия игры
     showTask($task);
-
-    // Получаем вопросы и правильные ответы
     [$questions, $answers] = $QnA;
-
-    // Задаем вопросы
     $result = askQuestions($questions, $answers, $count);
-
-    // Прощаемся
     farewell($username, $result);
 }
