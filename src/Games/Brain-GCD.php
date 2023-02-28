@@ -4,7 +4,6 @@ namespace BrainGames\Games\Brain\GCD;
 
 use function BrainGames\Engine\runGame;
 
-// Возвращает НОД двух чисел
 function getGCD(int $a, int $b): int
 {
     while ($b != 0) {
@@ -16,10 +15,6 @@ function getGCD(int $a, int $b): int
     return $a;
 }
 
-// Возвращает вопросы и правильные ответы для игры "НОД" в формате
-// массива из двух массивов: в первом массиве вопросы (задания), во
-// втором - правильные ответы на них. Аргумент $count определяет количество
-// элементов в обоих массивах (количество задаваемых вопросов).
 function getQnAForGCD(int $count): array
 {
     $questions = [];
@@ -35,8 +30,6 @@ function getQnAForGCD(int $count): array
     return [$questions, $answers];
 }
 
-// Запускает игру "НОД"
-// $count - количество раундов
 function runGCD(int $count = 3)
 {
     $task = 'Find the greatest common divisor of given numbers.';

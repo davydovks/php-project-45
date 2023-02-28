@@ -4,10 +4,6 @@ namespace BrainGames\Games\Brain\Even;
 
 use function BrainGames\Engine\runGame;
 
-// Возвращает вопросы и правильные ответы для игры "Проверка на чётность" в
-// формате массива из двух массивов: в первом массиве вопросы (задания), во
-// втором - правильные ответы на них. Аргумент $count определяет количество
-// элементов в обоих массивах (количество задаваемых вопросов).
 function getQnAForEven(int $count): array
 {
     $questions = [];
@@ -25,8 +21,6 @@ function getQnAForEven(int $count): array
     return [$questions, $answers];
 }
 
-// Запускает игру "Проверка на чётность".
-// $count - количество раундов
 function runEven(int $count = 3)
 {
     $task = 'Answer "yes" if the number is even, otherwise answer "no".';
