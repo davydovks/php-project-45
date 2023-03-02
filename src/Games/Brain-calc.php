@@ -39,11 +39,10 @@ function getQnAForCalc(int $count): array
     return [$questions, $answers];
 }
 
-const TASK = 'Text';
+const TASK = 'What is the result of the expression?';
 
 function runCalc(int $count = 3)
 {
-    $task = 'What is the result of the expression?';
     $QnA = getQnAForCalc($count);
-    runGame($task, $QnA, $count);
+    runGame(TASK, $QnA, $count);
 }

@@ -21,9 +21,10 @@ function getQnAForEven(int $count): array
     return [$questions, $answers];
 }
 
+const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 function runEven(int $count = 3)
 {
-    $task = 'Answer "yes" if the number is even, otherwise answer "no".';
     $QnA = getQnAForEven($count);
-    runGame($task, $QnA, $count);
+    runGame(TASK, $QnA, $count);
 }

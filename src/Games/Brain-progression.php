@@ -28,9 +28,10 @@ function getQnAForProgression(int $count): array
     return [$questions, $answers];
 }
 
+const TASK = 'What number is missing in the progression?';
+
 function runProgression(int $count = 3)
 {
-    $task = 'What number is missing in the progression?';
     $QnA = getQnAForProgression($count);
-    runGame($task, $QnA, $count);
+    runGame(TASK, $QnA, $count);
 }

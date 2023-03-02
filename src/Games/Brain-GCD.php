@@ -30,9 +30,10 @@ function getQnAForGCD(int $count): array
     return [$questions, $answers];
 }
 
+const TASK = 'Find the greatest common divisor of given numbers.';
+
 function runGCD(int $count = 3)
 {
-    $task = 'Find the greatest common divisor of given numbers.';
     $QnA = getQnAForGCD($count);
-    runGame($task, $QnA, $count);
+    runGame(TASK, $QnA, $count);
 }

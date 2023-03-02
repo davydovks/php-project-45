@@ -37,9 +37,10 @@ function getQnAForPrime(int $count): array
     return [$questions, $answers];
 }
 
+const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 function runPrime(int $count = 3)
 {
-    $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $QnA = getQnAForPrime($count);
-    runGame($task, $QnA, $count);
+    runGame(TASK, $QnA, $count);
 }
