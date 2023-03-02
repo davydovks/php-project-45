@@ -32,7 +32,7 @@ function getQnAForCalc(int $count): array
                 $answers[] = $number1 - $number2;
                 break;
             default:
-                throw new \Exception(`Unknown operation: '${operation}'!`);
+                throw new \Exception("Unknown operation: '${operation}'!");
         }
     }
 
