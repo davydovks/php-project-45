@@ -13,11 +13,6 @@ Brain Games is a set of 5 games to train your brain! The games are:
 4. brain-prime
 5. brain-progression
 
-Example of starting game brain-calc after installation:
-```sh
-$ make brain-calc
-```
-
 ## Setup
 
 ```sh
@@ -26,6 +21,21 @@ $ git clone https://github.com/davydovks/php-project-45.git
 $ cd php-package-45
 
 $ make install
+```
+
+## Run games
+
+You can start a game using any of these commands:
+```sh
+$ make brain-calc
+
+$ make brain-even
+
+$ make brain-gcd
+
+$ make brain-prime
+
+$ make brain-progression
 ```
 
 ## Asciinema recordings
