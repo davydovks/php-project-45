@@ -31,11 +31,15 @@ function getQnAForCalc(int $count): array
                 $questions[] = $number1 . ' - ' . $number2;
                 $answers[] = $number1 - $number2;
                 break;
+            default:
+                throw new \Exception(`Unknown operation: '${operation}'!`);
         }
     }
 
     return [$questions, $answers];
 }
+
+const TASK = 'Text';
 
 function runCalc(int $count = 3)
 {
