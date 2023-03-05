@@ -4,14 +4,7 @@ namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
-
-function askName(): string
-{
-    line("Welcome to the Brain Games!");
-    $name = prompt("May I have your name?", "", " ");
-    line("Hello, %s!", $name);
-    return $name;
-}
+use function BrainGames\Cli\askName;
 
 function askOneQuestion(string $question, string $answer): bool
 {
