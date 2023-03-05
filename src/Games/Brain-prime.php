@@ -6,6 +6,10 @@ use function BrainGames\Engine\runGame;
 
 function isPrime(int $num): bool
 {
+    if ($num < 2) {
+        return false;
+    }
+    
     $result = true;
     $highestIntegralSquareRoot = floor(sqrt($num));
 
