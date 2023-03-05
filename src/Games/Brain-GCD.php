@@ -4,15 +4,15 @@ namespace BrainGames\Games\BrainGCD;
 
 use function BrainGames\Engine\runGame;
 
-function getGCD(int $a, int $b): int
+function getGCD(int $num1, int $num2): int
 {
-    while ($b != 0) {
-        $m = $a % $b;
-        $a = $b;
-        $b = $m;
+    while ($num2 != 0) {
+        $remainder = $num1 % $num2;
+        $num1 = $num2;
+        $num2 = $remainder;
     }
 
-    return $a;
+    return $num1;
 }
 
 function getQnAForGCD(int $count): array
@@ -20,11 +20,11 @@ function getQnAForGCD(int $count): array
     $questions = [];
     $answers = [];
     for ($i = 0; $i < $count; $i++) {
-        $number1 = rand(1, 100);
-        $number2 = rand(1, 100);
+        $num1 = rand(1, 100);
+        $num2 = rand(1, 100);
 
-        $questions[] = $number1 . " " . $number2;
-        $answers[] = getGCD($number1, $number2);
+        $questions[] = $num1 . " " . $num2;
+        $answers[] = getGCD($num1, $num2);
     }
 
     return [$questions, $answers];
