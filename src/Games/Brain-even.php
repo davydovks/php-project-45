@@ -10,7 +10,7 @@ function getQnAForEven(int $count): array
 {
     $questions = [];
     $answers = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < $count; $i++) {
         $number = rand(1, 20);
         $questions[] = $number;
         if ($number % 2 === 0) {
