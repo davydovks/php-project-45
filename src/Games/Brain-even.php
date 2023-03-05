@@ -4,6 +4,8 @@ namespace BrainGames\Games\BrainEven;
 
 use function BrainGames\Engine\runGame;
 
+const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 function getQnAForEven(int $count): array
 {
     $questions = [];
@@ -20,8 +22,6 @@ function getQnAForEven(int $count): array
 
     return [$questions, $answers];
 }
-
-const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function runEven(int $count = 3)
 {

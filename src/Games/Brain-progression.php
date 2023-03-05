@@ -4,6 +4,8 @@ namespace BrainGames\Games\BrainProgression;
 
 use function BrainGames\Engine\runGame;
 
+const TASK = 'What number is missing in the progression?';
+
 function getQnAForProgression(int $count): array
 {
     $questions = [];
@@ -27,8 +29,6 @@ function getQnAForProgression(int $count): array
 
     return [$questions, $answers];
 }
-
-const TASK = 'What number is missing in the progression?';
 
 function runProgression(int $count = 3)
 {

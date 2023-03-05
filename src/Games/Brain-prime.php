@@ -4,6 +4,8 @@ namespace BrainGames\Games\BrainPrime;
 
 use function BrainGames\Engine\runGame;
 
+const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 function isPrime(int $num): bool
 {
     if ($num < 2) {
@@ -40,8 +42,6 @@ function getQnAForPrime(int $count): array
 
     return [$questions, $answers];
 }
-
-const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function runPrime(int $count = 3)
 {

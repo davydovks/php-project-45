@@ -4,6 +4,8 @@ namespace BrainGames\Games\BrainCalc;
 
 use function BrainGames\Engine\runGame;
 
+const TASK = 'What is the result of the expression?';
+
 function getQnAForCalc(int $count): array
 {
     $operations = ['+', '*', '-'];
@@ -38,8 +40,6 @@ function getQnAForCalc(int $count): array
 
     return [$questions, $answers];
 }
-
-const TASK = 'What is the result of the expression?';
 
 function runCalc(int $count = 3)
 {
