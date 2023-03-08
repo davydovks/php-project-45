@@ -7,33 +7,6 @@ use const BrainGames\Engine\ROUND_COUNT;
 
 const TASK = 'What is the result of the expression?';
 
-function getQnA(int $num1, int $num2, string $operation): array
-{
-    switch ($operation) {
-        case '+':
-            $question = $num1 . ' + ' . $num2;
-            $answer = $num1 + $num2;
-            break;
-        case '*':
-            $question = $num1 . ' * ' . $num2;
-            $answer = $num1 * $num2;
-            break;
-        case '-':
-            if ($num1 < $num2) {
-                $temp = $num1;
-                $num1 = $num2;
-                $num2 = $temp;
-            }
-            $question = $num1 . ' - ' . $num2;
-            $answer = $num1 - $num2;
-            break;
-        default:
-            throw new \Exception("Unknown operation: '${operation}'!");
-    }
-
-    return [$question, $answer];
-}
-
 function getQnAForCalc(int $count): array
 {
     $operations = ['+', '*', '-'];
@@ -43,7 +16,11 @@ function getQnAForCalc(int $count): array
         $num1 = rand(1, 30);
         $num2 = rand(1, 30);
         $operation = $operations[rand(0, 2)];
-        [$questions[], $answers[]] = getQnA($num1, $num2, $operation);
+        $question = implode(' ', [$num1, $operation, $num2]);
+        eval("\$answer = {$question};"); 
+
+        $questions[] = $question;
+        $answers[] = $answer;
     }
 
     return [$questions, $answers];
