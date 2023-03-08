@@ -8,11 +8,10 @@ use function BrainGames\Cli\askName;
 
 const ROUND_COUNT = 3;
 
-function runGame(string $task, array $QnA, int $count)
+function runGame(string $task, array $questions, array $answers, int $count)
 {
     $username = askName();
     line($task);
-    [$questions, $answers] = $QnA;
 
     for ($i = 0; $i < $count; $i++) {
         line('Question: %s', $questions[$i]);

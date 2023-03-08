@@ -30,5 +30,5 @@ function runGCD(int $count = ROUND_COUNT)
         $answers[] = getGCD($num1, $num2);
     }
 
-    runGame(TASK, [$questions, $answers], $count);
+    runGame(TASK, $questions, $answers, $count);
 }

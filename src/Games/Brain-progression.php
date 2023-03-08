@@ -28,5 +28,5 @@ function runProgression(int $count = ROUND_COUNT)
         $questions[] = implode(' ', $progression);
     }
 
-    runGame(TASK, [$questions, $answers], $count);
+    runGame(TASK, $questions, $answers, $count);
 }

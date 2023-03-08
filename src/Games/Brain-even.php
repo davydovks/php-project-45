@@ -18,5 +18,5 @@ function runEven(int $count = ROUND_COUNT)
         $answers[] = ($number % 2 === 0) ? "yes" : "no";
     }
 
-    runGame(TASK, [$questions, $answers], $count);
+    runGame(TASK, $questions, $answers, $count);
 }

@@ -24,5 +24,5 @@ function runCalc(int $count = ROUND_COUNT)
         $answers[] = $answer;
     }
 
-    runGame(TASK, [$questions, $answers], $count);
+    runGame(TASK, $questions, $answers, $count);
 }
