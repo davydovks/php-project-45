@@ -11,13 +11,12 @@ function askQuestions(array $questions, array $answers, int $count, string $name
     for ($i = 0; $i < $count; $i++) {
         line('Question: %s', $questions[$i]);
         $userAnswer = prompt("Your answer");
-        if ($userAnswer == $answers[$i]) {
-            line("Correct!");
-        } else {
+        if ($userAnswer !== $answers[$i]) {
             line("'$userAnswer' is wrong answer ;(. Correct answer was '{$answers[$i]}'.");
             line("Let's try again, %s!", $name);
             return false;
         }
+        line("Correct!");
     }
 
     line("Congratulations, %s!", $name);
