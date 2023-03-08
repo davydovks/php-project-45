@@ -6,6 +6,8 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Cli\askName;
 
+const ROUND_COUNT = 3;
+
 function runGame(string $task, array $QnA, int $count)
 {
     $username = askName();

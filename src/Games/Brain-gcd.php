@@ -3,6 +3,7 @@
 namespace BrainGames\Games\BrainGcd;
 
 use function BrainGames\Engine\runGame;
+use const BrainGames\Engine\ROUND_COUNT;
 
 const TASK = 'Find the greatest common divisor of given numbers.';
 
@@ -32,7 +33,7 @@ function getQnAForGCD(int $count): array
     return [$questions, $answers];
 }
 
-function runGCD(int $count = 3)
+function runGCD(int $count = ROUND_COUNT)
 {
     $QnA = getQnAForGCD($count);
     runGame(TASK, $QnA, $count);

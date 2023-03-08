@@ -3,6 +3,7 @@
 namespace BrainGames\Games\BrainPrime;
 
 use function BrainGames\Engine\runGame;
+use const BrainGames\Engine\ROUND_COUNT;
 
 const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -43,7 +44,7 @@ function getQnAForPrime(int $count): array
     return [$questions, $answers];
 }
 
-function runPrime(int $count = 3)
+function runPrime(int $count = ROUND_COUNT)
 {
     $QnA = getQnAForPrime($count);
     runGame(TASK, $QnA, $count);

@@ -3,6 +3,7 @@
 namespace BrainGames\Games\BrainCalc;
 
 use function BrainGames\Engine\runGame;
+use const BrainGames\Engine\ROUND_COUNT;
 
 const TASK = 'What is the result of the expression?';
 
@@ -48,7 +49,7 @@ function getQnAForCalc(int $count): array
     return [$questions, $answers];
 }
 
-function runCalc(int $count = 3)
+function runCalc(int $count = ROUND_COUNT)
 {
     $QnA = getQnAForCalc($count);
     runGame(TASK, $QnA, $count);
