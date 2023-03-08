@@ -17,16 +17,11 @@ function runProgression(int $count = ROUND_COUNT)
         $start = rand(1, 20);
         $increment = rand(1, 9);
         $position = rand(1, 8); // Скрываем число между 2 и 9 включительно (из 10)
-        $progression = [];
-        for ($j = 0, $number = $start; $j < 10; $j++, $number += $increment) {
-            if ($j === $position) {
-                $progression[] = '..';
-                $answers[] = $number;
-            } else {
-                $progression[] = $number;
-            }
-        }
+        $end = $start + $increment * 10;
+        $progression = range($start, $end, $increment);
+        $progression[$position] = '..';        
         $questions[] = implode(' ', $progression);
+        $answers[] = $start + $increment * $position;
     }
 
     runGame(TASK, $questions, $answers, $count);
