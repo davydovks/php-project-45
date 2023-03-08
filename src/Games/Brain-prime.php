@@ -26,7 +26,7 @@ function isPrime(int $num): bool
     return $result;
 }
 
-function getQnAForPrime(int $count): array
+function runPrime(int $count = ROUND_COUNT)
 {
     $questions = [];
     $answers = [];
@@ -37,11 +37,5 @@ function getQnAForPrime(int $count): array
         $answers[] = isPrime($number) ? "yes" : "no";
     }
 
-    return [$questions, $answers];
-}
-
-function runPrime(int $count = ROUND_COUNT)
-{
-    $QnA = getQnAForPrime($count);
-    runGame(TASK, $QnA, $count);
+    runGame(TASK, [$questions, $answers], $count);
 }
