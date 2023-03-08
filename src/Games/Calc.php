@@ -20,10 +20,8 @@ function runCalc(int $count = ROUND_COUNT)
         $num2 = rand(1, MAX_NUMBER);
         $operation = $operations[rand(0, count($operations) - 1)];
         $question = implode(' ', [$num1, $operation, $num2]);
-        eval("\$answer = {$question};");
-
         $questions[] = $question;
-        $answers[] = $answer;
+        eval("\$answers[] = {$question};");
     }
 
     runGame(TASK, $questions, $answers, $count);
