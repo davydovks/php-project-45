@@ -17,7 +17,7 @@ function runGame(string $task, array $QnA, int $count)
     for ($i = 0; $i < $count; $i++) {
         line('Question: %s', $questions[$i]);
         $userAnswer = prompt("Your answer");
-        if ($userAnswer !== $answers[$i]) {
+        if ($userAnswer != $answers[$i]) {
             line("'$userAnswer' is wrong answer ;(. Correct answer was '{$answers[$i]}'.");
             line("Let's try again, %s!", $username);
             return false;
