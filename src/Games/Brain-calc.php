@@ -17,7 +17,7 @@ function runCalc(int $count = ROUND_COUNT)
     for ($i = 0; $i < $count; $i++) {
         $num1 = rand(1, 30);
         $num2 = rand(1, 30);
-        $operation = $operations[rand(0, 2)];
+        $operation = $operations[rand(0, count($operations) - 1)];
         $question = implode(' ', [$num1, $operation, $num2]);
         eval("\$answer = {$question};");
 
