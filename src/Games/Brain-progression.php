@@ -3,6 +3,7 @@
 namespace BrainGames\Games\BrainProgression;
 
 use function BrainGames\Engine\runGame;
+
 use const BrainGames\Engine\ROUND_COUNT;
 
 const TASK = 'What number is missing in the progression?';
