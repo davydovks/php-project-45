@@ -36,7 +36,7 @@ function runPrime(int $count = ROUND_COUNT)
     for ($i = 0; $i < $count; $i++) {
         $number = rand(1, MAX_NUMBER);
         $questions[] = $number;
-        $answers[] = isPrime($number) ? "yes" : "no";
+        $answers[] = isPrime($number) ? 'yes' : 'no';
     }
 
     runGame(TASK, $questions, $answers, $count);

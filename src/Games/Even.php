@@ -17,7 +17,7 @@ function runEven(int $count = ROUND_COUNT)
     for ($i = 0; $i < $count; $i++) {
         $number = rand(1, MAX_NUMBER);
         $questions[] = $number;
-        $answers[] = ($number % 2 === 0) ? "yes" : "no";
+        $answers[] = ($number % 2 === 0) ? 'yes' : 'no';
     }
 
     runGame(TASK, $questions, $answers, $count);

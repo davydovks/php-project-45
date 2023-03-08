@@ -28,7 +28,7 @@ function runGCD(int $count = ROUND_COUNT)
     for ($i = 0; $i < $count; $i++) {
         $num1 = rand(1, MAX_NUMBER);
         $num2 = rand(1, MAX_NUMBER);
-        $questions[] = $num1 . " " . $num2;
+        $questions[] = $num1 . ' ' . $num2;
         $answers[] = getGCD($num1, $num2);
     }
 
