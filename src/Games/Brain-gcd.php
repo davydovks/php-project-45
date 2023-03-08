@@ -7,6 +7,7 @@ use function BrainGames\Engine\runGame;
 use const BrainGames\Engine\ROUND_COUNT;
 
 const TASK = 'Find the greatest common divisor of given numbers.';
+const MAX_NUMBER = 100;
 
 function getGCD(int $num1, int $num2): int
 {
@@ -25,8 +26,8 @@ function runGCD(int $count = ROUND_COUNT)
     $answers = [];
 
     for ($i = 0; $i < $count; $i++) {
-        $num1 = rand(1, 100);
-        $num2 = rand(1, 100);
+        $num1 = rand(1, MAX_NUMBER);
+        $num2 = rand(1, MAX_NUMBER);
         $questions[] = $num1 . " " . $num2;
         $answers[] = getGCD($num1, $num2);
     }

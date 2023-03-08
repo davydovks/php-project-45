@@ -7,6 +7,7 @@ use function BrainGames\Engine\runGame;
 use const BrainGames\Engine\ROUND_COUNT;
 
 const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const MAX_NUMBER = 100;
 
 function isPrime(int $num): bool
 {
@@ -33,7 +34,7 @@ function runPrime(int $count = ROUND_COUNT)
     $answers = [];
 
     for ($i = 0; $i < $count; $i++) {
-        $number = rand(1, 100);
+        $number = rand(1, MAX_NUMBER);
         $questions[] = $number;
         $answers[] = isPrime($number) ? "yes" : "no";
     }
