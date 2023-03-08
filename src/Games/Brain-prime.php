@@ -34,11 +34,7 @@ function getQnAForPrime(int $count): array
     for ($i = 0; $i < $count; $i++) {
         $number = rand(1, 100);
         $questions[] = $number;
-        if (isPrime($number)) {
-            $answers[] = "yes";
-        } else {
-            $answers[] = "no";
-        }
+        $answers[] = isPrime($number) ? "yes" : "no";
     }
 
     return [$questions, $answers];

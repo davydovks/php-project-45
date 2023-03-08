@@ -14,11 +14,7 @@ function getQnAForEven(int $count): array
     for ($i = 0; $i < $count; $i++) {
         $number = rand(1, 20);
         $questions[] = $number;
-        if ($number % 2 === 0) {
-            $answers[] = "yes";
-        } else {
-            $answers[] = "no";
-        }
+        $answers[] = ($number % 2 === 0) ? "yes" : "no";
     }
 
     return [$questions, $answers];
