@@ -16,17 +16,14 @@ function isPrime(int $num): bool
         return false;
     }
 
-    $result = true;
-    $highestIntegralSquareRoot = floor(sqrt($num));
-
-    for ($i = 2; $i <= $highestIntegralSquareRoot; $i++) {
+    $limit = floor(sqrt($num));
+    for ($i = 2; $i <= $limit; $i++) {
         if ($num % $i == 0) {
-            $result = false;
-            break;
+            return false;
         }
     }
 
-    return $result;
+    return true;
 }
 
 function runPrime(int $count = ROUND_COUNT)
