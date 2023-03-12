@@ -13,7 +13,7 @@ const MIN_START_NUMBER = 1;
 const MAX_INCREMENT = 9;
 const MIN_INCREMENT = 1;
 
-function runProgression(int $count = ROUND_COUNT)
+function startGame(int $count = ROUND_COUNT)
 {
     $questions = [];
     $answers = [];

@@ -10,7 +10,7 @@ const TASK = 'What is the result of the expression?';
 const MAX_NUMBER = 30;
 const MIN_NUMBER = 1;
 
-function runCalc(int $count = ROUND_COUNT)
+function startGame(int $count = ROUND_COUNT)
 {
     $questions = [];
     $answers = [];

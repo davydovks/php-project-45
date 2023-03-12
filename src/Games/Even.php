@@ -10,7 +10,7 @@ const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 const MAX_NUMBER = 30;
 const MIN_NUMBER = 1;
 
-function runEven(int $count = ROUND_COUNT)
+function startGame(int $count = ROUND_COUNT)
 {
     $questions = [];
     $answers = [];

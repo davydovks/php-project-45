@@ -26,7 +26,7 @@ function isPrime(int $num): bool
     return true;
 }
 
-function runPrime(int $count = ROUND_COUNT)
+function startGame(int $count = ROUND_COUNT)
 {
     $questions = [];
     $answers = [];

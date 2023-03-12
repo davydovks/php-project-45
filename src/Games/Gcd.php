@@ -21,7 +21,7 @@ function getGCD(int $num1, int $num2): int
     return $num1;
 }
 
-function runGCD(int $count = ROUND_COUNT)
+function startGame(int $count = ROUND_COUNT)
 {
     $questions = [];
     $answers = [];
