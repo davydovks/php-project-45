@@ -8,6 +8,7 @@ use const BrainGames\Engine\ROUND_COUNT;
 
 const TASK = 'What is the result of the expression?';
 const MAX_NUMBER = 30;
+const MIN_NUMBER = 1;
 
 function runCalc(int $count = ROUND_COUNT)
 {
@@ -16,8 +17,8 @@ function runCalc(int $count = ROUND_COUNT)
     $operations = ['+', '*', '-'];
 
     for ($i = 0; $i < $count; $i++) {
-        $num1 = rand(1, MAX_NUMBER);
-        $num2 = rand(1, MAX_NUMBER);
+        $num1 = rand(MIN_NUMBER, MAX_NUMBER);
+        $num2 = rand(MIN_NUMBER, MAX_NUMBER);
         $operation = $operations[rand(0, count($operations) - 1)];
         $question = implode(' ', [$num1, $operation, $num2]);
         $questions[] = $question;

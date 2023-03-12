@@ -8,6 +8,7 @@ use const BrainGames\Engine\ROUND_COUNT;
 
 const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
 const MAX_NUMBER = 30;
+const MIN_NUMBER = 1;
 
 function runEven(int $count = ROUND_COUNT)
 {
@@ -15,7 +16,7 @@ function runEven(int $count = ROUND_COUNT)
     $answers = [];
 
     for ($i = 0; $i < $count; $i++) {
-        $number = rand(1, MAX_NUMBER);
+        $number = rand(MIN_NUMBER, MAX_NUMBER);
         $questions[] = $number;
         $answers[] = ($number % 2 === 0) ? 'yes' : 'no';
     }
